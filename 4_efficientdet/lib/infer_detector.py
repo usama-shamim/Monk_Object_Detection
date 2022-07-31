@@ -113,8 +113,8 @@ class Infer():
             cv2.imwrite("output.jpg", output_image)
             return scores, labels, boxes
         
-        except:
-            print("NO Object Detected")
+        except Exception as e:
+            print(e)
             return None
 
     def predict_batch_of_images(self, img_folder, class_list, vis_threshold = 0.4, output_folder='Inference'):
